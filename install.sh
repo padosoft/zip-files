@@ -14,7 +14,7 @@
 crontab -l > mycron
 
 #echo new cron into cron file
-echo "0	*	*	*	*	bash /root/myscript/zip-files/zipfiles.sh /my/dir/images/ images.zip /my/dir/archives/ 0 1 30 > /var/log/zipfiles.log 2>&1" >> mycron
+echo "0 0 * * *	bash /root/myscript/zip-files/zipfiles.sh /my/dir/images/ images.zip /my/dir/archives/ 0 1 30 > /var/log/zipfiles.log 2>&1" >> mycron
 
 #install new cron file
 crontab mycron
